@@ -1,6 +1,0 @@
-gaia.known_zeroconf="{\"445aa9a688de818be95fd07f79e19ccfcc1d1fa7\":{\"known\":false,\"popularity\":1,\"prio\":\"connect\",\"shown\":0}}"
-app.player.volume=25558
-lastfm.enabled=true
-lastfm.user="Wololo1337"
-lastfm.pass="d8be7133cbf87260db4abbc1c1582f7c"
-gaia.attached_device_id="445aa9a688de818be95fd07f79e19ccfcc1d1fa7"
