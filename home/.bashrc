@@ -12,46 +12,36 @@ BROWSER=/usr/bin/firefox-developer-edition
 EDITOR=/usr/bin/vim
 # >>>>>END ADDED BY CNCHI INSTALLER<<<<< #
 
+shopt -s autocd
+
 # Ctrl + P fg hotkey
 bind -x '"\C-p"':"fg"  # CTRL+P
 
-# More pewpew less QQ
-alias qq='exit'
-
-# Fast net
-alias netme='firefox &'
-
-# Quick .bashrc edit
+# Aliases for various commands
+alias ccat="highlight --out-format=ansi"
 alias edit_ali='vim ~/.bashrc'
-
-# Quick i3 config edit incl backup
 alias edi3='cat ~/.config/i3/config > ~/.config/i3/config_backup_alias && vim ~/.config/i3/config'
-
-# List i3 commands
 alias comonads='cat ~/.config/i3/config | grep "bindsym"'
-
-alias irg='cd ~/Development/FER/IRG'
-
-alias umjin='cd ~/Development/FER/AI'
-
-alias skrjez='cd ~/Development/FER/Skriptni'
-
-# change dir to MrePro
-alias mrepro='cd ~/Development/FER/MrePro'
-
-# change dir to MrePro git
-alias mreprogit='cd ~/Development/FER/MrePro/prijenosnik/ss49212'
-
-# switch locale to Croatian
+alias gst='git status'
 alias loc_hr='localectl set-locale LANG=hr_HR.utf8'
+alias ls="ls -hN --color=auto --group-directories-first"
 
-# switch locale to English
-alias loc_en='localectl set-locale LANG=en_GB.utf8'
+# Directory aliases
+alias haskell_main='cd ~/Development/FER/Haskell'
+alias haskell_training='cd ~/Development/FER/Haskell/InglipReplicant/training-exercises'
+alias haskell_levels='cd ~/Development/FER/Haskell/InglipReplicant/level-battles'
+alias opp='cd ~/Development/FER/OPP/ferovci'
+alias optjava='cd ~/Development/FER/OptJava/ropaeruj'
+alias projekt='cd ~/Development/FER/PPP/projekt-ppp'
+alias projekt-kod='cd ~/Development/FER/PPP?projekt-ppp/protokol'
+alias latex-dir='cd ~/Documents/Latex'
+alias chatbot='cd ~/Development/chatbot/'
 
-# add display to projector HDMI1
-alias display_projector='xrandr --output HDMI1 --mode 1920x1080'
+PS1="\[\e[1;36m\]\u\[\e[m\]\[\e[1;31m\]@\[\e[m\]\[\e[1;31m\]\h\[\e[m\]\[\e[1;32m\][\[\e[m\]\[\e[1;32m\]\W\[\e[m\]\[\e[1;32m\]]\[\e[m\]\[\e[1;33m\]\\$\[\e[m\]\[\e[1;33m\]->\[\033[0m\] "
+# PS1="\[\033[32m\][\w]\[\033[0m\]\[\033[1;36m\]\u\[\033[32m\]@\h\[\033[1;33m\]-> \[\033[0m\]"
 
-# Colorized full path prompt
-PS1="\[\033[32m\][\w]\[\033[0m\]\[\033[1;36m\]\u\[\033[32m\]@\h\[\033[1;33m\]-> \[\033[0m\]"
+#dependencies:
+#highlight
+#tree
 
-# test
+shdl() { curl -O $(curl -s https://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
